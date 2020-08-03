@@ -1,0 +1,32 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 500,
+    "max": 1000
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "Pj6LeA+ud8aW+EAr9io2oHqxxV0=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://nikolaj808.github.io/vuetify-tictactoe",
+      "issuer": "nikolaj808.github.io",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "\\username",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb+srv://nikolaj808:Vandglas123@cluster0.qkw3x.mongodb.net/vuetify-tictactoe?retryWrites=true&w=majority"
+}
